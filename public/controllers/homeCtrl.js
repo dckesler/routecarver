@@ -178,41 +178,44 @@
                 alert('Please select a difficulty setting');
             }
             else{
-                $scope.spotFormShow = false;
-                $scope.spotSpinShow = true;
-                locationService.saveSpot($scope.spotLat, $scope.spotLong, $scope.spotAddress, $scope.spotCity, $scope.spotCounty, $scope.spotState, $scope.spotDiff).then(function(){
-                    var elem = $('#upDown');
-                    $scope.spotSpinShow = false;
-                    $scope.spotDiff = null;
-                    elem.animate({'box-shadow': '10px 15px 10px #333'}, 300);
-                    elem.animate({'margin-top': '0px'}, {duration: 300, queue: false});
-                    var easy = document.getElementById('easy');
-                    var inter = document.getElementById('inter');
-                    var advanced = document.getElementById('advanced');
-                    easy.className = "difficultyButton";
-                    inter.className = "difficultyButton";
-                    advanced.className = "difficultyButton";
-                    document.getElementById('htmler').innerHTML = '<p style="color:black;position:absolute;left:36%" id="saved">Saved...</p>';
-                    window.scrollTo(0, 0);
-                    $('#saved').fadeOut(3000);
-                }, function(err){
-                    console.log(err);
-                    var elem = $('#upDown');
-                    $scope.spotSpinShow = false;
-                    $scope.spotDiff = null;
-                    elem.animate({'box-shadow': '10px 15px 10px #333'}, 300);
-                    elem.animate({'margin-top': '0px'}, {duration: 300, queue: false});
-                    var easy = document.getElementById('easy');
-                    var inter = document.getElementById('inter');
-                    var advanced = document.getElementById('advanced');
-                    easy.className = "difficultyButton";
-                    inter.className = "difficultyButton";
-                    advanced.className = "difficultyButton";
-                    document.getElementById('htmler').innerHTML = '<p style="color:black;position:absolute;left:36%" id="saved">This address already exists</p>';
-                    window.scrollTo(0, 0);
-                    $('#saved').fadeOut(5000);
-                });
-
+                var confirm = confirm("You are about to register your current location as a trail for other longboarders to use." +
+                " Are you sure this is what you want?");
+                if(confirm){
+                    $scope.spotFormShow = false;
+                    $scope.spotSpinShow = true;
+                    locationService.saveSpot($scope.spotLat, $scope.spotLong, $scope.spotAddress, $scope.spotCity, $scope.spotCounty, $scope.spotState, $scope.spotDiff).then(function(){
+                        var elem = $('#upDown');
+                        $scope.spotSpinShow = false;
+                        $scope.spotDiff = null;
+                        elem.animate({'box-shadow': '10px 15px 10px #333'}, 300);
+                        elem.animate({'margin-top': '0px'}, {duration: 300, queue: false});
+                        var easy = document.getElementById('easy');
+                        var inter = document.getElementById('inter');
+                        var advanced = document.getElementById('advanced');
+                        easy.className = "difficultyButton";
+                        inter.className = "difficultyButton";
+                        advanced.className = "difficultyButton";
+                        document.getElementById('htmler').innerHTML = '<p style="color:black;position:absolute;left:36%" id="saved">Saved...</p>';
+                        window.scrollTo(0, 0);
+                        $('#saved').fadeOut(3000);
+                    }, function(err){
+                        console.log(err);
+                        var elem = $('#upDown');
+                        $scope.spotSpinShow = false;
+                        $scope.spotDiff = null;
+                        elem.animate({'box-shadow': '10px 15px 10px #333'}, 300);
+                        elem.animate({'margin-top': '0px'}, {duration: 300, queue: false});
+                        var easy = document.getElementById('easy');
+                        var inter = document.getElementById('inter');
+                        var advanced = document.getElementById('advanced');
+                        easy.className = "difficultyButton";
+                        inter.className = "difficultyButton";
+                        advanced.className = "difficultyButton";
+                        document.getElementById('htmler').innerHTML = '<p style="color:black;position:absolute;left:36%" id="saved">This address already exists</p>';
+                        window.scrollTo(0, 0);
+                        $('#saved').fadeOut(5000);
+                    });
+                }
             }
         }
         function spotGo(prop, value){
