@@ -1,7 +1,7 @@
 var express = require('express'),
     Mongoose = require('mongoose'),
     bodyParser = require('body-parser'),
-    port = 8335,
+    port = 80,
     app = express(),
     request = require('request');
 
