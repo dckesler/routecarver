@@ -4,7 +4,7 @@
 
     app.service("locationService", function($http){
         this.getLocation = function(lat, long){
-            return $http.get('http://localhost:8335/location?lat='+lat+'&long='+long);
+            return $http.get('/location?lat='+lat+'&long='+long);
         };
 
         var Spot = function(lat, long, address, city, county, state, difficulty, url){
@@ -30,7 +30,7 @@
                     url = "../images/Advanced.png";
             }
             var aSpot = new Spot(lat, long, address, city, county, state, difficulty, url);
-            return $http.post('http://localhost:8335/newSpot', aSpot);
+            return $http.post('/newSpot', aSpot);
         }
     });
 })();

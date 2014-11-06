@@ -23,7 +23,7 @@
         }
         function getMarkers(prop, value){
             var deferred = $q.defer();
-            $http.get('http://localhost:8335/markers?prop='+prop+'&value='+value)
+            $http.get('/markers?prop='+prop+'&value='+value)
                 .then(function(data){
                     currentMarkers = [];
                     var markerData = data.data;
