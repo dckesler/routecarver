@@ -46,7 +46,7 @@
                     break;
                 case time>10 && time<=15:
                     $scope.timeStyle = "../styles/noonish.css";
-                    $scope.timeMessage = "Lunch break boarding";
+                    $scope.timeMessage = "Mid-day boarding?";
                     break;
                 case time>15 && time<20:
                     $scope.timeStyle = "../styles/afternoon.css";
