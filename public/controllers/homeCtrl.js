@@ -178,9 +178,9 @@
                 alert('Please select a difficulty setting');
             }
             else{
-                var confirm = confirm("You are about to register your current location as a trail for other longboarders to use." +
+                var sure = confirm("You are about to register your current location as a trail for other longboarders to use." +
                 " Are you sure this is what you want?");
-                if(confirm){
+                if(sure){
                     $scope.spotFormShow = false;
                     $scope.spotSpinShow = true;
                     locationService.saveSpot($scope.spotLat, $scope.spotLong, $scope.spotAddress, $scope.spotCity, $scope.spotCounty, $scope.spotState, $scope.spotDiff).then(function(){
