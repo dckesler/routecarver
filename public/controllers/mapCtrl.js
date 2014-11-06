@@ -21,7 +21,6 @@
                     },
                     zoom: 8
                 };
-                console.log($scope.map);
             };
             var error = function(err){
                 alert("Geolocation failed "+err);
@@ -36,8 +35,6 @@
         }
         function getMarkers(){
             $scope.markers = mapService.giveMarkers();
-            console.log($scope.markers);
-
         }
 
         $scope.map = {

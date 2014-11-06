@@ -22,7 +22,6 @@
             return currentMarkers;
         }
         function getMarkers(prop, value){
-            console.log(prop, value);
             var deferred = $q.defer();
             $http.get('http://localhost:8335/markers?prop='+prop+'&value='+value)
                 .then(function(data){
@@ -34,7 +33,6 @@
                     }
                     deferred.resolve(data.data);
                     $state.go('home.map');
-                    console.log(currentMarkers);
                 });
             return deferred.promise;
         }
