@@ -1,0 +1,14 @@
+<div class="addressText">
+    <p>Route Address: {{currentAddress}}</p>
+    <p>Route Difficulty: {{currentDiff}}</p>
+</div>
+
+<ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="{scrollwheel: false}">
+
+    <ui-gmap-layer type="BicyclingLayer"></ui-gmap-layer>
+
+    <ui-gmap-marker ng-repeat="marker in markers" coords="marker.coords" idkey="marker.id" icon="marker.url" click="sniff(marker.address, marker.difficulty)">
+    </ui-gmap-marker>
+
+    </ui-gmap-layer>
+</ui-gmap-google-map>

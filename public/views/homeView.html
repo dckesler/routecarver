@@ -1,0 +1,57 @@
+<div class="pageBox">
+    <div class="topPage">
+        <div>
+            <p class="topText">  {{clockTime | date: 'shortTime'}}</p>
+            <p class="topText">{{currentCity}} {{currentState}}</p>
+        </div>
+        <div>
+            <p class="topText" letter-in wait="3000" speed="100" fade="200" word="{{timeMessage}}"></p>
+        </div>
+        <div>
+            <p class="topText topWeather">{{temp}}</p>
+            <p class="topText topWeather">{{condition}}</p>
+        </div>
+    </div>
+
+        <div class="newSpotBox spotText">
+            <div style="align-items: center">
+                <div ng-click="loadSpotForm()" id="upDown" bounce class="newSpotButton">
+                    <div>Make New Spot</div>
+                </div>
+                <div>
+                    <div class="loadSpinner" ng-show="spotSpinShow"></div>
+                    <div class="saver" id="htmler"></div>
+                </div>
+            </div>
+
+
+
+                <div ng-show="spotFormShow" class="newSpotForm">
+                        <p>Address</p>
+                            <div class="formInfo">{{spotAddress}}</div>
+                        <p>Latitude</p>
+                            <div class="formInfo">{{prettyLat}}</div>
+                        <p>Longitude</p>
+                            <div class="formInfo">{{prettyLong}}</div>
+                        <p>Difficulty</p>
+                            <div class="spotDiffBox">
+                                <div id="easy" class="difficultyButton" ng-click="spotDifficulty('Easy')">Easy</div>
+                                <div id="inter" class="difficultyButton" ng-click="spotDifficulty('Inter')">Intermediate</div>
+                                <div id="advanced" class="difficultyButton" ng-click="spotDifficulty('Advanced')">Advanced</div>
+                            </div>
+                        <button ng-click="saveSpot()" class="saveSpotButton">Submit Spot</button>
+                </div>
+
+        </div>
+
+
+    <div class="spotFindBox">
+        <div>Find Board Spots in...</div>
+        <div ng-click="spotGo('city', currentCity)">{{currentCity}}</div>
+        <div ng-click="spotGo('county', currentCounty)">{{currentCounty}}</div>
+        <div ng-click="spotGo('state', currentState)">{{currentState}}</div>
+    </div>
+
+    <div class="loadSpinner" ng-show="mapSpinner"></div>
+    <div class="map" ui-view></div>
+</div>

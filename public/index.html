@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en"  ng-app="longboard" ng-controller="homeCtrl">
+<head>
+    <meta charset="UTF-8">
+    <title>Route Carver</title>
+    <link rel="stylesheet" href="http://necolas.github.io/normalize.css/3.0.1/normalize.css"/>
+    <link rel="stylesheet" ng-href="{{timeStyle}}"/>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"/>
+</head>
+<body>
+
+
+
+<div ui-view></div>
+<script>
+
+</script>
+
+
+
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src='scripts/shadow.js'></script>
+    <script src="bower_components/lodash/dist/lodash.min.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.11/angular-ui-router.min.js"></script>
+
+    <script src="bower_components/bluebird/js/browser/bluebird.js"></script>
+
+    <script src="//maps.googleapis.com/maps/api/js?libraries=weather,geometry,visualization,places&sensor=false&language=en&v=3.17"></script>
+
+
+    <script src='bower_components/angular-google-maps/dist/angular-google-maps.min.js'></script>
+
+
+
+    <script src="app.js"></script>
+    <script src="controllers/homeCtrl.js"></script>
+    <script src="controllers/mapCtrl.js"></script>
+    <script src="services/locationService.js"></script>
+    <script src="services/weatherService.js"></script>
+    <script src="services/mapService.js"></script>
+    <script src="directives/background.js"></script>
+    <script src="directives/stars.js"></script>
+    <script src="directives/letterIn.js"></script>
+    <script src="directives/fadeScroll.js"></script>
+    <script src="directives/bounce.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+/* Background */
+body {
+    background: #FFF;
+}
+
+@font-face {
+    font-family: steelfish;
+    src: url('../GeosansLight.ttf');
+}
+
+html {
+    color: 	white;
+    font-family: steelfish;
+}
+/*Page*/
+
+.pageBox {
+    position: absolute;
+    width: 100%;
+    align-content: space-around;
+}
+
+/* First Section */
+.topPage {
+    top: 40px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    background: hsl(205, 70%, 13%);
+}
+
+.topWeather {
+    text-align: right;
+}
+
+.topText {
+    font-size: 3.4rem;
+    margin: 4px;
+}
+
+
+
+
+
+/* New Longboard Spot */
+
+.newSpotBox {
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/*  Loader */
+@keyframes spin {
+    from { transform:rotate(0deg); }
+    to { transform:rotate(360deg); }
+}
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+.loadSpinner {
+    margin-top: 100px;
+    width: 60px;
+    margin-left: 10%;
+    height: 60px;
+    padding: 20px;
+    background-image: url('../images/nightSpinner.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 1200ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+
+    -moz-animation-name: spin;
+    -moz-animation-duration: 1200ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+
+    -ms-animation-name: spin;
+    -ms-animation-duration: 1200ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+
+    animation-name: spin;
+    animation-duration: 1200ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+.newSpotButton {
+    width: 120px;
+    height: 120px;
+    font-size: 1.5rem;
+    text-align: center;
+    border-radius: 3px;
+    background: hsl(170, 90%, 10%);
+    transform: rotate(45deg);
+    box-shadow: 10px 15px 10px #333;
+}
+
+.newSpotButton div {
+    transform: rotate(-45deg);
+    padding-top: 35px;
+    margin-left: -20px;
+}
+
+.newSpotButton:hover {
+    cursor: pointer;
+}
+.newSpotForm {
+    margin-top: 50px;
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.formInfo {
+    color: hsl(205, 70%, 13%);
+    width: 100%;
+    background: hsla(120, 0%, 85%, .1);
+}
+
+.newSpotForm p {
+    font-size: 1.7rem;
+    color: #666;
+}
+
+.spotDiffBox {
+    color: hsl(205, 70%, 13%);
+    width:100%;
+    justify-content: space-around;
+    margin-bottom: 20px;
+
+}
+
+.difficultyButton {
+    border: 3px solid hsl(170, 90%, 10%);
+    flex-shrink: 1;
+    display: inline-block;
+    padding: 5px;
+}
+
+.difficultyButton:hover {
+    color: white;
+    background: hsla(205, 70%, 13%, .9);
+}
+
+.selected {
+    color: white;
+    background: hsla(205, 70%, 13%, .9);
+}
+
+.selected.difficultyButton:hover {
+    background: hsla(205, 70%, 13%, 1);
+}
+
+.saveSpotButton {
+    border: 3px solid hsl(205, 70%, 10%);
+    background: hsl(205, 70%, 13%);
+    display: inline-block;
+    padding: 5px;
+    color: white;
+}
+
+.saveSpotButton:hover {
+    background: hsl(205, 70%, 7%);
+    border: 3px solid hsl(205, 70%, 4%);
+}
+
+.saver {
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+/* Find Board Spots in... */
+
+.spotFindBox {
+    font-size: 2rem;
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+    border-radius: 4px;
+    color: white;
+}
+
+.spotFindBox div {
+    padding: 20px 0;
+    background: hsl(200, 90%, 11%);
+}
+
+.spotFindBox div:first-child{
+    color: #666;
+    border-bottom: 3px solid white;
+    background: none;
+}
+.spotFindBox div:first-child:hover{
+    background: none;
+    cursor: default;
+}
+
+.spotFindBox div:hover{
+    background: hsl(170, 90%, 9%);
+    cursor: pointer;
+}
+
+/* Map */
+.addressText {
+    color: hsl(170, 90%, 9%);
+    font-size: 3rem;
+    margin-left: 30px;
+}
+
+.map {
+    margin-top: 150px;
+}
+
+.angular-google-map-container {
+    height: 400px;
+}
