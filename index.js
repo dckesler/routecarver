@@ -1,7 +1,6 @@
 var express = require('express'),
     Mongoose = require('mongoose'),
     bodyParser = require('body-parser'),
-    port = 80,
     app = express(),
     request = require('request');
 
@@ -9,9 +8,7 @@ var SpotController = require('./lib/controllers/spotCtrl');
 
 
 Mongoose.connect('mongodb://localhost/routecarverrs');
-app.listen(port, function(){
-    console.log("Listening on "+port);
-});
+app.listen(80);
 
 app.use(bodyParser.json());
 app.use(express.static(__dirname+'/public'));
