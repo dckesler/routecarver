@@ -38,19 +38,15 @@
             switch(true){
                 case time < 5 || time >= 20:
                     $scope.timeStyle = "../styles/night.css";
-                    $scope.timeMessage = "Night boarding";
                     break;
                 case time>5 && time<=10:
                     $scope.timeStyle = "../styles/morning.css";
-                    $scope.timeMessage = "Good Morning";
                     break;
                 case time>10 && time<=15:
                     $scope.timeStyle = "../styles/noonish.css";
-                    $scope.timeMessage = "Mid-day boarding?";
                     break;
                 case time>15 && time<20:
                     $scope.timeStyle = "../styles/afternoon.css";
-                    $scope.timeMessage = "Good Afternoon"
             }
         }
 
