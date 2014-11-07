@@ -34,8 +34,12 @@ html {
 }
 
 .topText {
-    font-size: 3.4rem;
+    font-size: 1.3rem;
     margin: 4px;
+}
+.title {
+    font-size: 2.7rem;
+    margin: 0;
 }
 
 
@@ -238,7 +242,11 @@ html {
 
 @media (max-width: 500px) {
     .topText {
-        font-size: 2rem;
+        font-size: 1rem;
+    }
+    .title {
+        margin: 0;
+        font-size: 1.5rem;
     }
     .addressText {
         font-size: 1.5rem;
