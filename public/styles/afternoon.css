@@ -233,3 +233,12 @@ html {
 .angular-google-map-container {
     height: 400px;
 }
+
+@media (max-width: 500px) {
+    .topText {
+        font-size: 2rem;
+    }
+    .addressText {
+        font-size: 1.5rem;
+    }
+}
