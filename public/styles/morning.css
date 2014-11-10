@@ -17,6 +17,7 @@ html {
 .pageBox {
     position: absolute;
     width: 100%;
+    display: -webkit-flex;
     -webkit-align-content: space-around;
     align-content: space-around;
 }
@@ -150,6 +151,7 @@ html {
 .spotDiffBox {
     color: hsl(198, 50%, 55%);
     width:100%;
+    display: -webkit-flex;
     justify-content: space-around;
     margin-bottom: 20px;
 
