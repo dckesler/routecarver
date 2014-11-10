@@ -17,7 +17,6 @@ html {
 .pageBox {
     position: absolute;
     width: 100%;
-    display: -webkit-flex;
     -webkit-align-content: space-around;
     align-content: space-around;
 }
